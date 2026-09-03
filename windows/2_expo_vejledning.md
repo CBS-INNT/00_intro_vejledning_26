@@ -31,7 +31,7 @@ node -v && npm -v
 2. Kør denne kommando. **Kopier hele linjen** — alle dele af den betyder noget:
 
 ```
-npx create-expo-app@latest min_app --template blank@sdk-54
+npx create-expo-app@latest min_app --template blank --no-agents-md
 ```
 
 3. Gå ind i projektet og installer pakkerne:
@@ -65,16 +65,6 @@ npx expo start --tunnel
 ```
 
 Virker det stadig ikke, kan det være nødvendigt at gå på mobil-hotspot.
-
-**Hvis du får "Project is incompatible with this version of Expo Go"**
-
-Så er dit projekt lavet med en for ny version. Slet mappen og lav den igen:
-
-```
-cd .. && rmdir /s /q min_app && npx create-expo-app@latest min_app --template blank@sdk-54 && cd min_app && npm install
-```
-
-Husk `--template blank@sdk-54` — uden den kan appen ikke åbnes på iPhone.
 
 **Hvis der er error i terminalen efter du har installeret pakker**
 

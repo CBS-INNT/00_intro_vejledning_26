@@ -14,12 +14,14 @@
 Når du opretter et nyt projekt i dette kursus, skal du altid bruge denne kommando. Kopier hele linjen:
 
 ```
-npx create-expo-app@latest min_app --template blank@sdk-54
+npx create-expo-app@latest min_app --template blank --no-agents-md
 ```
 
 Skift `min_app` ud med navnet på din app. Brug ikke æ, ø, å eller mellemrum i navnet.
 
-`--template blank@sdk-54` er ikke valgfrit. Uden den kan appen ikke åbnes i Expo Go på iPhone.
+`--template blank` er ikke valgfrit. Den giver dig et projekt med en `App.js`-fil, og det er den fil, alle øvelserne tager udgangspunkt i. Vælger du en anden skabelon, får du i stedet en `src/app`-mappe, og så passer vejledningerne ikke.
+
+`@latest` sørger for, at du får den nyeste version. Den skal passe med den Expo Go-app, du henter i App Store eller Google Play.
 
 Derefter:
 
@@ -41,9 +43,6 @@ npx expo start
 ```
 npx expo start --tunnel
 ```
-
-**Hvis du får "Project is incompatible with this version of Expo Go":**
-Dit projekt er lavet uden `--template blank@sdk-54`. Slet mappen og lav projektet igen med den fulde kommando ovenfor.
 
 **Hvis der er error i terminalen, så prøv:**
 ```

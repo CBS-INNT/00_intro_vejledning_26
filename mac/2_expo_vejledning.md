@@ -43,7 +43,7 @@ Vi anbefaler, at I laver en mappe "INNT_Exercises", hvor I kan gemme jeres opgav
 2. Kør denne kommando. **Kopier hele linjen** — alle dele af den betyder noget:
 
 ```
-npx create-expo-app@latest min_app --template blank@sdk-54
+npx create-expo-app@latest min_app --template blank --no-agents-md
 ```
 
 3. Når den er færdig, gå ind i projektet og installer pakkerne:
@@ -77,16 +77,6 @@ npx expo start --tunnel
 ```
 
 Virker det stadig ikke, så del mobilhotspot fra din telefon til din computer.
-
-**Hvis du får "Project is incompatible with this version of Expo Go"**
-
-Så er dit projekt lavet med en for ny version. Slet mappen og lav den igen:
-
-```
-cd .. && rm -rf min_app && npx create-expo-app@latest min_app --template blank@sdk-54 && cd min_app && npm install
-```
-
-Husk `--template blank@sdk-54` — uden den kan appen ikke åbnes på iPhone.
 
 **Hvis der er error i terminalen efter du har installeret pakker**
 
